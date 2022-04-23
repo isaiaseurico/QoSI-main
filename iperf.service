@@ -1,0 +1,10 @@
+[Unit]
+Description=iperf3 server
+After=syslog.target network.target auditd.service
+
+[Service]
+User=root
+ExecStart=/usr/bin/iperf3 -s -p 5201
+
+[Install]
+WantedBy=multi-user.target
